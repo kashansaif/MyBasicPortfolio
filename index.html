@@ -169,7 +169,7 @@
       <!-- Introduction Section -->
       <section id="introduction" class="introduction-section fade-in">
         <h2 class="section-title">Introduction</h2>
-        <p class="text-start">
+        <p class="text-center">
           <strong>Hey! I'm Kashan Saif,</strong>a dedicated and passionate frontend web developer with a robust
           foundation in cutting-edge web technologies, including HTML, CSS, JavaScript, Bootstrap, ReactJS, and
           TypeScript. I specialize in crafting responsive, dynamic, and aesthetically captivating web applications that
@@ -231,11 +231,23 @@
     </div>
 
     <script>
-      // Fade-in effect
-      document.addEventListener("DOMContentLoaded", function () {
-        const fadeIns = document.querySelectorAll(".fade-in");
-        fadeIns.forEach((element) => {
-          element.classList.add("appear");
+     document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target); // Stop observing once element is visible
+              }
+            });
+          },
+          { threshold: 0.5 } // Adjust this value if necessary
+        );
+
+        elements.forEach((element) => {
+          observer.observe(element);
         });
       });
     </script>
