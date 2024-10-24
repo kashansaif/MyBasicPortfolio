@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kashan Saif's Portfolio</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #121212;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+      }
+
+      .portfolio {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      /* Header Section */
+      .header {
+        text-align: center;
+        padding: 50px 20px;
+        background-color: #1c1c1c;
+      }
+
+      .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+      }
+
+      .title {
+        font-size: 2.5em;
+        margin: 10px 0;
+      }
+
+      .subtitle {
+        font-size: 1.5em;
+        color: #b3b3b3;
+      }
+
+      .cta-button {
+        padding: 10px 20px;
+        margin-top: 20px;
+        background-color: #ff5722;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+      }
+
+      /* Section Styles */
+      .section-title {
+        text-decoration: underline;
+        text-decoration-color: #ff5622a9;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .skills-section,
+      .projects-section {
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #2a2a2a;
+        border-radius: 10px;
+      }
+
+      .skills {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      .skill-card {
+        flex: 0 0 calc(33.33% - 10px); /* Three boxes per row, adjust for spacing */
+        margin: 5px; /* Space between boxes */
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: #333;
+        border-radius: 5px;
+      }
+      .skill-card:hover,
+      .project-card:hover {
+        background-color: #202020;
+      }
+
+      .project-card {
+        background-color: #333;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 20px;
+        background-color: #1c1c1c;
+      }
+
+      /* Fade-in Animation */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+
+      .fade-in.appear {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .introduction-section strong {
+        font-size: 20px;
+        display: block;
+        text-align: center;
+        color: #fe561d;
+      }
+      .introduction-section p {
+        text-align: center;
+      }
+      @media (max-width: 576px) {
+        .skill-card {
+          flex: 0 0 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="portfolio">
+      <!-- Header Section -->
+      <header class="header">
+        <div class="header-content fade-in">
+          <img src="kashan.jpg" alt="Kashan Saif" class="profile-pic" />
+          <div class="header-text">
+            <h1 class="title">Kashan Saif</h1>
+            <p class="subtitle">Frontend Web Developer |<br> Accounts & Finance Manager</p>
+            <a href="#skills" class="cta-button">Explore My Skills</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Introduction Section -->
+      <section id="introduction" class="introduction-section fade-in">
+        <h2 class="section-title">Introduction</h2>
+        <p>
+          <strong>Hello! I'm Kashan Saif,</strong> Hello! I'm Kashan Saif, a dedicated and enthusiastic web developer
+          with a strong foundation in modern web technologies, including HTML, CSS, JavaScript, Bootstrap, React, and
+          TypeScript. I specialize in creating responsive, dynamic, and visually appealing web applications that are not
+          only functional but also provide an exceptional user experience. My passion lies in designing intuitive and
+          interactive interfaces, ensuring seamless performance across all devices and platforms. By continuously
+          improving my skills and staying up to date with the latest trends in web development, I strive to deliver
+          solutions that not only meet but exceed client expectations.
+        </p>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section fade-in">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills">
+          <div class="skill-card">HTML <span>(HyperText Markup Language)</span></div>
+          <div class="skill-card">CSS <span>(Cascading Style Sheets)</span></div>
+          <div class="skill-card">JavaScript <span>(Programming Language)</span></div>
+          <div class="skill-card">Bootstrap <span>(Framework Of CSS)</span></div>
+          <div class="skill-card">React Js <span>(JavaScript Library for Building User Interfaces)</span></div>
+          <div class="skill-card">TypeScript <span>(A superset of JavaScript that adds static types)</span></div>
+          <div class="skill-card">Responsive Design <span>(Media Querry | UX UI)</span></div>
+          <div class="skill-card">MS Office Excel <span>(Microsoft Office Excel)</span></div>
+          <div class="skill-card">VBA Programming <span>(Visual Basic for Applications)</span></div>
+          <div class="skill-card">Accounts & Finance <span></span></div>
+          
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="projects-section fade-in">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects">
+          <div class="project-card">
+            <h3>Project 1</h3>
+            <p>A cool project description goes here.</p>
+          </div>
+          <div class="project-card">
+            <h3>Project 2</h3>
+            <p>A cool project description goes here.</p>
+          </div>
+          <div class="project-card">
+            <h3>Project 3</h3>
+            <p>A cool project description goes here.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <h3>Contact Me</h3>
+        <p>Email: <a href="mailto:kashansaif@outlook.com">kashansaif@outlook.com</a></p>
+      </footer>
+    </div>
+
+    <!-- Internal JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".fade-in");
+
+        const observer = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target); // Stop observing once element is visible
+              }
+            });
+          },
+          { threshold: 0.1 }
+        );
+
+        elements.forEach((element) => {
+          observer.observe(element);
+        });
+      });
+    </script>
+  </body>
+</html>
